@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "serve:wc": "http-server 'web-components'",
+    "build": "vue-cli-service build",
+    "build:wc-basic": "yarn build --target wc --name basic-counter --inline-vue 'src/components/Basic-Counter.vue'",
+    "build:wc-composition": "yarn build --target wc  --name composition-counter --inline-vue 'src/components/Composition-Counter.vue'"
   },
   "dependencies": {
     "@vue/composition-api": "^0.5.0",
@@ -15,6 +18,7 @@
     "@vue/cli-plugin-babel": "~4.3.0",
     "@vue/cli-plugin-typescript": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
+    "http-server": "^0.12.3",
     "typescript": "~3.8.3",
     "vue-template-compiler": "^2.6.11"
   }
